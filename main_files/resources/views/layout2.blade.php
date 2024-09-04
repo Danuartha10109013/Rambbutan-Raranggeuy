@@ -250,7 +250,6 @@
                             <span id="cartQty">0</span>
                         </a>
                     </li>
-                    <li><a class="start_btn" href="{{ route('select-product-type') }}">{{__('user.Start Selling')}}</a></li>
                 </ul>
             </div>
         </div>

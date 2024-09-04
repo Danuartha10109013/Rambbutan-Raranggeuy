@@ -27,19 +27,14 @@ class PaymentMethodController extends Controller
     }
 
     public function index(){
-        $paypal = PaypalPayment::first();
-        $stripe = StripePayment::first();
-        $razorpay = RazorpayPayment::first();
-        $flutterwave = Flutterwave::first();
+        
         $bank = BankPayment::first();
-        $paystackAndMollie = PaystackAndMollie::first();
-        $instamojo = InstamojoPayment::first();
-        $sslcommerzPayment = SslcommerzPayment::first();
+        
         $countires = CurrencyCountry::orderBy('name','asc')->get();
         $currencies = Currency::orderBy('name','asc')->get();
         $setting = Setting::first();
         
-        return view('admin.payment_method', compact('paypal','stripe','razorpay','bank','paystackAndMollie','flutterwave','instamojo','sslcommerzPayment','countires','currencies','setting'));
+        return view('admin.payment_method', compact('bank','countires','currencies','setting'));
     }
 
     public function updatePaypal(Request $request){

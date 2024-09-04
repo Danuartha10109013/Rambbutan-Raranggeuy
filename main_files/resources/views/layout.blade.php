@@ -58,22 +58,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-7 col-lg-7 d-none d-lg-block">
-                    <div class="wsus__topbar_countdown d-flex flex-wrap align-items-center">
-                        @php
-                            $discount =  App\Models\ProductDiscount::first();
-                            $today = Carbon\Carbon::now();
-                            $end_time = $discount->end_time;
-                            $end_year = date('Y', strtotime($end_time));
-                            $end_month = date('m', strtotime($end_time));
-                            $end_day = date('d', strtotime($end_time));
-                        @endphp
-
-                        <p><a target="__blank" href="{{ $discount->link }}"><span>{{ $discount->offer }}% </span> {{ $discount->discountlangfrontend->title }}</a></p>
-                        <input type="hidden" id="end_year" value="{{ $end_year }}">
-                        <input type="hidden" id="end_month" value="{{ $end_month }}">
-                        <input type="hidden" id="end_day" value="{{ $end_day }}">
-                        <div class="simply-countdown simply-countdown-one"></div>
-                    </div>
+                    
                 </div>
                 <div class="col-xl-5 col-lg-5">
                     <div class="wsus__topbar_language">
@@ -251,7 +236,6 @@
                             <span id="cartQty">0</span>
                         </a>
                     </li>
-                    <li><a class="start_btn" href="{{ route('select-product-type') }}">{{__('user.Start Selling')}}</a></li>
                 </ul>
             </div>
         </div>
