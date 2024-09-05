@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+// For app/Http/Controllers/Admin/Auth/ConfirmPasswordController.php
+namespace App\Http\Controllers\Admin\Auth;
+
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
