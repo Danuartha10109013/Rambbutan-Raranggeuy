@@ -103,21 +103,15 @@ class RegisterController extends Controller
         $user->name = $request->name;
         $user->user_name = Str::lower(str_replace(' ','_', $request->name)).'_'.mt_rand(100000, 999999);
         $user->email = $request->email;
+        $user->status = 1;
+        $user->email_verified = 1;
         $user->password = Hash::make($request->password);
         $user->verify_token = Str::random(100);
         $user->save();
 
-        MailHelper::setMailConfig();
-
-        $template=EmailTemplate::where('id',4)->first();
-        $subject=$template->subject;
-        $message=$template->description;
-        $message = str_replace('{{user_name}}',$request->name,$message);
-        Mail::to($user->email)->send(new UserRegistration($message,$subject,$user));
-
-        $notification = trans('user_validation.Register Successfully. Please Verify your email');
+        $notification = trans('user_validation.Register Successfully. Please login');
         $notification=array('messege'=>$notification,'alert-type'=>'success');
-        return redirect()->back()->with($notification);
+        return redirect()->route('login')->with($notification);
     }
 
     public function userVerification($token){

@@ -131,10 +131,7 @@
 
                                             $total_balance = $orders_items->sum('price');
                                         @endphp
-                                        <li>
-                                            <p>{{__('user.Earnings')}}:</p>
-                                            <h2>{{ $setting->currency_icon }}{{ $total_balance }}</h2>
-                                        </li>
+                                        
                                     @endif
                                 </ul>
                             </li>

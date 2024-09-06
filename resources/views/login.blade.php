@@ -79,16 +79,7 @@
                             </div>
                         </form>
                         <p class="other_login">{{__('user.I have no account .')}} <a href="{{ route('register') }}">{{__('user.Create Account')}}</a></p>
-                        @if ($socialLogin->is_gmail == 1)
-                        <ul>
-                            <li>
-                                <a href="{{ route('login-google') }}">
-                                    <span><img src="{{ asset('frontend/images/google_icon.png') }}" alt="google" class="img-fluid w-100"></span>
-                                    {{__('user.Sign In with Google')}}
-                                </a>
-                            </li>
-                        </ul>
-                        @endif
+                        
                     </div>
                 </div>
             </div>
