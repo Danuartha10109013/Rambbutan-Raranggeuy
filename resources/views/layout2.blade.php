@@ -302,7 +302,7 @@
    <!--=============================
         FOOTER START
     ==============================-->
-    <footer class="pt_120 xs_pt_80" style="background: url({{ asset('frontend/images/footer_bg.jpg') }});">
+    <footer class="pt_120 xs_pt_80" style="background: url({{ asset('frontend/images/foter-cc.png') }});">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-xl-4 col-md-4 col-lg-4">

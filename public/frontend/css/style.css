@@ -75,14 +75,14 @@ button {
 }
 
 :root {
-    --colorPrimary: #1992FB;
-    --colorBlue: #183EBD;
+    --colorPrimary: #fb3319;
+    --colorBlue: #bd1818;
     --paraColor: #616161;
     --colorBlack: #333333;
     --colorWhite: #ffffff;
     --ratingColor: #FFC107;
     --colorYellow: #F2C94C;
-    --gradientColor: linear-gradient(127deg, #8D49FE 0%, #013CB0 100.67%);
+    --gradientColor: linear-gradient(127deg, #720808 0%, #f00f0f 100.67%);
     --boxShadow: 0px 6px 60px 5px rgba(0, 0, 0, 0.08);
 }
 
@@ -116,7 +116,7 @@ button {
 }
 
 .common_btn:hover {
-    background: linear-gradient(127deg, #013CB0 0%, #8D49FE 100.67%);
+    background: linear-gradient(127deg, #ad2206 0%, #ff2200 100.67%);
 }
 
 .view_all {
@@ -1207,7 +1207,7 @@ button {
 }
 
 .wsus__counter_overlay {
-    background: #2B239C90;
+    background: #e0250490;
 }
 
 .wsus__single_counter {
@@ -1772,7 +1772,7 @@ footer {
 
 .wsus__footer_bottom {
     padding: 30px 0px;
-    background: #070729;
+    background: #5d0202;
 }
 
 .wsus__footer_copyright p {
@@ -1861,7 +1861,7 @@ footer {
     cursor: pointer;
     text-align: center;
     line-height: 1;
-    background: #02388d;
+    background: #500303;
     transition: all linear .3s;
     -webkit-transition: all linear .3s;
     -moz-transition: all linear .3s;
