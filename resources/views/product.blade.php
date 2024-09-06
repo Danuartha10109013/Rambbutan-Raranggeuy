@@ -10,7 +10,7 @@
     <!--=============================
         BREADCRUMB START
     ==============================-->
-    <section class="wsus__breadcrumb" style="background: url({{ asset('frontend/images/breadcrumb_bg.jpg') }});">
+    <section class="wsus__breadcrumb" style="background: url({{ asset('frontend/images/banner_bg.jpg') }});">
         <div class="container">
             <div class="row">
                 <div class="col-12">
