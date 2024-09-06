@@ -248,7 +248,7 @@
     <!--=============================
         SUBSCRIBE START
     ==============================-->
-    <section class="wsus__subscribe pt_85 pb_90" style="background: url({{ asset('frontend/images/subscribe_bg.jpg') }});">
+    <section class="wsus__subscribe pt_85 pb_90" style="background: url({{ asset('frontend/images/sbss.jpg') }});">
         <div class="container">
             <div class="row">
                 <div class="col-xxl-6 col-sm-10 col-md-9 col-xl-8">
