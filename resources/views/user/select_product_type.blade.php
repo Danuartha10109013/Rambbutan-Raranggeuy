@@ -17,10 +17,10 @@
                         <h3>{{__('user.Prodcut Upload')}}</h3>
                         <h6>{{__('user.Select product type')}}</h6>
                         <select class="select_js" name="product_type">
-                            <option value="script">{{__('user.Script')}}</option>
+                            {{-- <option value="script">{{__('user.Script')}}</option> --}}
                             <option value="image">{{__('user.Image')}}</option>
-                            <option value="video">{{__('user.Video')}}</option>
-                            <option value="audio">{{__('user.Audio')}}</option>
+                            {{-- <option value="video">{{__('user.Video')}}</option> --}}
+                            {{-- <option value="audio">{{__('user.Audio')}}</option> --}}
                         </select>
                         <h5>{{ $productType->pagelangfrontend->title }}</h5>
                         <p>{{ $productType->pagelangfrontend->description }}</p>

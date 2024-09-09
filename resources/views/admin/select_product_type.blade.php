@@ -12,7 +12,7 @@
 
             <div class="section-body">
                 <div class="row mt-4">
-                    <div class="col-6">
+                    {{-- <div class="col-6">
                         <div class="card">
                             <img class="card-img-top" src="{{ asset($productItem->script_image) }}" alt="Card image cap">
                             <div class="card-body">
@@ -21,7 +21,7 @@
                               <a href="{{ route('admin.product.create',['product_type' => 'script']) }}" class="btn btn-primary">{{__('admin.Go to create page')}}</a>
                             </div>
                           </div>
-                    </div>
+                    </div> --}}
 
                     <div class="col-6">
                         <div class="card">
@@ -34,7 +34,7 @@
                           </div>
                     </div>
 
-                    <div class="col-6">
+                    {{-- <div class="col-6">
                         <div class="card">
                             <img class="card-img-top" src="{{ asset($productItem->video_image) }}" alt="Card image cap">
                             <div class="card-body">
@@ -43,9 +43,9 @@
                                 <a href="{{ route('admin.product.create',['product_type' => 'video']) }}" class="btn btn-primary">{{__('admin.Go to create page')}}</a>
                               </div>
                           </div>
-                    </div>
+                    </div> --}}
 
-                    <div class="col-6">
+                    {{-- <div class="col-6">
                         <div class="card">
                             <img class="card-img-top" src="{{ asset($productItem->audio_image) }}" alt="Card image cap">
                             <div class="card-body">
@@ -54,7 +54,7 @@
                                 <a href="{{ route('admin.product.create',['product_type' => 'audio']) }}" class="btn btn-primary">{{__('admin.Go to create page')}}</a>
                               </div>
                           </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
 
