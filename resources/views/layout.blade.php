@@ -344,7 +344,7 @@
                         <h4>{{__('user.Important Link')}}</h4>
                         <ul>
                             <li><a href="{{ route('register') }}">{{__('user.Become an author')}}</a></li>
-                            <li><a href="{{ route('terms-and-conditions') }}">{{__('user.Terms & Conditions')}}</a></li>
+                            {{-- <li><a href="{{ route('terms-and-conditions') }}">{{__('user.Terms & Conditions')}}</a></li> --}}
                             <li><a href="{{ route('products') }}">{{__('user.Our product')}}</a></li>
                             <li><a href="{{ route('cart-view') }}">{{__('user.Cart page')}}</a></li>
                         </ul>
