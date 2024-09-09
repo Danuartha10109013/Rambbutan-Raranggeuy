@@ -241,7 +241,6 @@
         MENU END
     ==============================-->
 
-
     @yield('frontend-content')
 
     @if (!Route::is('home'))
