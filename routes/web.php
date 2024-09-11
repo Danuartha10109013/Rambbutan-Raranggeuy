@@ -88,6 +88,7 @@ use App\Http\Controllers\Provider\ProviderProfileController;
 use App\Http\Controllers\Provider\ProviderDashboardController;
 use App\Http\Controllers\Provider\AppointmentScheduleController;
 use App\Http\Controllers\Admin\Auth\AdminForgotPasswordController;
+use App\Http\Controllers\MindtranceController;
 
 Route::group(['middleware' => ['demo','XSS']], function () {
 
@@ -131,6 +132,9 @@ Route::group(['middleware' => ['maintainance']], function () {
     Route::get('/response-paystack', [PaymentController::class, 'paystackResponse'])->name('response-paystack');
     Route::get('/pay-with-instamojo', [PaymentController::class, 'payWithInstamojo'])->name('pay-with-instamojo');
     Route::get('/response-instamojo', [PaymentController::class, 'instamojoResponse'])->name('response-instamojo');
+
+    Route::get('/pay-with-midtrance', [MindtranceController::class, 'checkout'])->name('pay-with-midtrance');
+    Route::post('/midtrans-callback', [MindtranceController::class, 'callback'])->name('midtrance-callback');
 
     Route::get('/pay-with-paypal', [PaypalController::class, 'payWithPaypal'])->name('pay-with-paypal');
     Route::get('/paypal-payment-success', [PaypalController::class, 'paypalPaymentSuccess'])->name('paypal-payment-success');

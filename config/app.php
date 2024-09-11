@@ -181,7 +181,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        // Midtrans\MidtranceServiceProviders::class,
         /*
          * Package Service Providers...
          */
@@ -216,6 +216,7 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Purifier' => Mews\Purifier\Facades\Purifier::class,
+        // 'Midtrans' => Midtrans\Midtrans::class,
     ])->toArray(),
 
 ];

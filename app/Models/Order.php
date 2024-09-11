@@ -7,7 +7,32 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    use HasFactory;
+    protected $table = 'orders';
+
+    // Specify the fields that are mass assignable
+    protected $fillable = [
+        'order_id',
+        'user_id',
+        'name',
+        'email',
+        'phone',
+        'total_amount',
+        'payment_method',
+        'payment_status',
+        'transection_id',
+        'currency_icon',
+        'country_code',
+        'currency_code',
+        'currency_rate',
+        'order_status',
+        'order_approval_date',
+        'order_date',
+        'order_month',
+        'order_year',
+        'cart_qty',
+        'created_at',
+        'updated_at'
+    ];
 
 
     public function client(){

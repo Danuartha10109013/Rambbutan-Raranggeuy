@@ -45,7 +45,20 @@
                                 </button>
                             </li>
                             @endif
+                            <li class="nav-item">
+                                <form action="{{ route('pay-with-midtrance') }}" method="GET" id="midtranceForm">
+                                    @csrf
+                                    <input type="hidden" name="total_amount" value="{{ $cartTotal }}">
+                                    <input type="hidden" name="cart_qty" value="{{ $cartQty }}">
+                                </form>
+                                <small style="color: red;font-size: 8px;margin-top:-5px">*disarankan</small>
+                                <button class="nav-link" id="midtrance" data-bs-toggle="pill">
+
+                                    <img src="{{ asset('frontend/images/midtrans.png') }}" alt="midtrance" class="img-fluis w-100">
+                                </button>
+                            </li>
                             @if ($paypal->status == 1)
+
                             <li class="nav-item">
                                 <form action="{{ route('pay-with-paypal') }}" method="GET" id="paypalForm">
                                     @csrf
@@ -57,6 +70,7 @@
                                 </button>
                             </li>
                             @endif
+
                             @if ($mollie->mollie_status == 1)
                             <li class="nav-item">
                                 <button class="nav-link" id="mollie" data-bs-toggle="pill">
@@ -127,6 +141,7 @@
                             @endif
                             @if ($bankPayment->status == 1)
                             <li class="nav-item">
+                                <small style="font-size: 8px">Bank Transfer</small>
                                 <button class="nav-link" data-bs-toggle="modal" data-bs-target="#bankPayment">
                                     <img src="{{ asset($bankPayment->image) }}" alt="Degmark" class="img-fluis w-100">
                                 </button>
@@ -370,6 +385,9 @@
     $(document).ready(function(){
         $('#paypal').on('click',function(){
             $('#paypalForm').submit();
+        });
+        $('#midtrance').on('click',function(){
+            $('#midtranceForm').submit();
         });
         $('#rajorpay').on('click',function(){
             $('#rajorpayForm').submit();

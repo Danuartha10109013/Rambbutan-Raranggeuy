@@ -282,6 +282,7 @@ class CartController extends Controller
                     $flutterwave = Flutterwave::first();
                     $bankPayment = BankPayment::first();
                     $sslcommerz = SslcommerzPayment::first();
+                    
                     return view('checkout')->with([
                         'active_theme' => $active_theme,
                         'setting' => $setting,
