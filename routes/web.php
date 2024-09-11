@@ -134,7 +134,7 @@ Route::group(['middleware' => ['maintainance']], function () {
     Route::get('/response-instamojo', [PaymentController::class, 'instamojoResponse'])->name('response-instamojo');
 
     Route::get('/pay-with-midtrance', [MindtranceController::class, 'checkout'])->name('pay-with-midtrance');
-    Route::post('/midtrans-callback', [MindtranceController::class, 'callback'])->name('midtrance-callback');
+
 
     Route::get('/pay-with-paypal', [PaypalController::class, 'payWithPaypal'])->name('pay-with-paypal');
     Route::get('/paypal-payment-success', [PaypalController::class, 'paypalPaymentSuccess'])->name('paypal-payment-success');

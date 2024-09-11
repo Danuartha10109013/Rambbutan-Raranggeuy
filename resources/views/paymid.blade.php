@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script type="text/javascript"
-    src="https://app.sandbox.midtrans.com/snap/snap.js"
+    src="https://app.sandbox.midtrans.com/snap/snap.js">
+
     data-client-key="{{ config('midtrans.client_key') }}">
     </script>
     <link rel="icon" type="image/png" href="{{ asset('logo.png') }}">
@@ -71,6 +72,7 @@
     </div>
 
     <script type="text/javascript">
+    var orderId = {{ $order_id }};
         var payButton = document.getElementById('pay-button');
         payButton.addEventListener('click', function () {
             // Use the generated snapToken from the controller
@@ -78,7 +80,8 @@
                 embedId: 'snap-container',
                 onSuccess: function (result) {
                     alert("Payment success!");
-                    console.log(result);
+                    // console.log(result);
+                    window.location.href = '/api/midtrans-callback/{{$order_id}}';
                 },
                 onPending: function (result) {
                     alert("Waiting for your payment!");

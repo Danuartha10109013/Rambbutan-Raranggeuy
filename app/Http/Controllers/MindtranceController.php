@@ -25,6 +25,7 @@ class MindtranceController extends Controller
         $orders->name = Auth::user()->name;
         $orders->email = Auth::user()->email;
         $orders->phone = Auth::user()->phone;
+        $orders->payment_status = "unpaid";
         $orders->save();
 
         
@@ -52,20 +53,27 @@ class MindtranceController extends Controller
             );
         }
         
+        $order_id = $orders->id;
+            // dd($order_id);
+        // session(['order_id' => $orders->id]);
 
         $snapToken = \Midtrans\Snap::getSnapToken($params);
 
         // dd($snapToken);
-        return view('paymid',compact('snapToken'));
+        return view('paymid',compact('snapToken','order_id'));
     }
 
-    public function callback(Request $request){
+    public function callback(Request $request,$order_id){
+        $order = Order::find($order_id);
+        // dd($order_id);
+        $order->payment_status = "paid";
+        $order->update();
         $serverKey = config('midtrance.server_key');
         $hased = hash('sha512',$request->order_id.$request->status_code.$request->gross_amout.$serverKey);
         if ($hased == $request->signature_key){
             if($request->transaction_status == 'capture'){
                 $order = Order::find($request->order_id);
-                $order->update(['status' => 'paid']);
+                $order->update(['payment_status' => 'paid']);
             }
         }
     return redirect()->route('payment-success');
